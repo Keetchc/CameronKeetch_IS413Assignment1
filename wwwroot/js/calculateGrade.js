@@ -3,15 +3,17 @@
 
 
 //This portion of the code is used to calculate the grade after the user inputs it on the main page.
-var submit = document.getElementById('submit');
 
-submit.addEventListener("click", function () {
+
+$("#submit").click(function () {
+
+    if 
     //Brings in the values from the HTML page and adds the weight. 
-    var assignmentScore = document.getElementById('assignments').value * .5;
-    var groupProjectScore = document.getElementById('groupProject').value * .1;
-    var quizzesScore = document.getElementById('quizzes').value * .1;
-    var examsScore = document.getElementById('exams').value * .2;
-    var intexScore = document.getElementById('INTEX').value * .1;
+    var assignmentScore = $("#assignments").val() * .5;
+    var groupProjectScore = $("#groupProject").val() * .1;
+    var quizzesScore = $("#quizzes").val() * .1;
+    var examsScore = $("#exams").val() * .2;
+    var intexScore = $("#INTEX").val() * .1;
 
     //adds the scores together to find final percentage
     var finalGrade = assignmentScore + groupProjectScore + quizzesScore + examsScore + intexScore;
